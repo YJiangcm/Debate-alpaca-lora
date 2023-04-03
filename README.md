@@ -1,7 +1,7 @@
 # Debate-alpaca-lora
 An English debate model by instruct-tuning LLaMA on [Kialo](https://www.kialo.com/) data. 
 
-We may ask the model to **support** or **oppose** a claim by the desconding order of impact. <a href="https://colab.research.google.com/github/LC1332/Chinese-alpaca-lora/blob/main/notebook/TuoLingC_evaluation_code.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+We may ask the model to **support** or **oppose** a claim by the desconding order of impact. <a href="https://colab.research.google.com/drive/1emuN4LcO4X2-BCoATbhawIZeGBr-d3Y-?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 For example,
 
