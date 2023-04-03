@@ -20,9 +20,39 @@ Response: 1. Sex work is an industry that can be detrimental to society, as it c
 ```
 
 ## Data Collection
+We collected 1,560 discussion threads before January 2020 of Kialo. Each discussion forms an argument tree as the following figure shows. Except the thesis, every claim in the argument tree either opposes or supports its parent claim. Moreover, each claim has impact votes assigned by the users of the platform. The impact votes evaluate how impactful a claim is.
 
+<img src="https://github.com/YJiangcm/Debate-alpaca-lora/blob/master/pics/kialo_example.png" width="600" height="300">
+
+We extract each argument with its supported children claims or opposed children claims to form a training example. The children claims are ranked by the descending order of impact. We delete children claims whose votes are less than 5 and the average impact score less than 2. Finally, we obtain 20,998 training data formuated as the following examples:
+```
+{
+    "instruction": "Support the following claim in descending order of impact.",
+    "input": "Even if racial profiling is wrong, a ban on racial profiling is likely to be counterproductive.",
+    "output": "1. Enforcing a ban on racial profiling is very difficult.\n2. Banning racial profiling may only further increase racial tensions"
+},
+{
+    "instruction": "Oppose the following claim in descending order of impact.",
+    "input": "Even if racial profiling is wrong, a ban on racial profiling is likely to be counterproductive.",
+    "output": "1. Considering the deaths associated around race in relation to law enforcement, it would give much hope to communities where the attitude is that 'police are not there to help non-white people', declaring no race is different, and that all races deserve to be safe in public is not counterproductive by any means.\n2. Since racial profiling is morally unacceptable, it ought to be illegal regardless of the consequences of banning it"
+},
+```
 
 ## Training
+We train our model based on [Alpaca LoRA](https://github.com/tloen/alpaca-lora). It costs about 1.5 hours on 2 RTX 3090Ti.
+```
+WORLD_SIZE=2 CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --master_port=1234 finetune.py \
+    --base_model='decapoda-research/llama-7b-hf' \
+    --resume_from_checkpoint 'alpaca-lora-7b' \
+    --num_epochs=3 \
+    --cutoff_len=256 \
+    --group_by_length \
+    --data_path 'kialo_debate.json' \
+    --output_dir './DebateGPT_7b_001' \
+    --lora_target_modules='[q_proj,k_proj,v_proj,o_proj]' \
+    --lora_r=16 \
+    --micro_batch_size=16
+```
 
 
 ## Citation
