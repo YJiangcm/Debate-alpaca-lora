@@ -55,7 +55,7 @@ WORLD_SIZE=2 CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --master_port=
     --cutoff_len=256 \
     --group_by_length \
     --data_path 'kialo_debate.json' \
-    --output_dir './DebateGPT_7b_001' \
+    --output_dir './debate-alpaca-lora_7b_001' \
     --lora_target_modules='[q_proj,k_proj,v_proj,o_proj]' \
     --lora_r=16 \
     --micro_batch_size=16
