@@ -26,7 +26,7 @@ Response: 1. Sex work is an industry that can be detrimental to society, as it c
 Please cite the repo if you use the data or code in this repo.
 
 ```
-@misc{alpaca,
+@misc{debate-alpaca-lora,
   author={Yuxin Jiang},
   title = {An Instruction-following English debate model, LoRA tuning on LLaMA},
   year = {2023},
