@@ -19,6 +19,10 @@ Response: 1. Sex work is an industry that can be detrimental to society, as it c
 2. Sex work is [degrading] (https://www.psychologytoday.com/blog/in-the-name-love/201106/prostitution-degrading-and-dehumanizing-women) to women and has a [damaging effect] (http://www.apa.org/pi/ses/resources/sex-work.pdf) on society.
 ```
 
+## Data Collection
+
+
+## Training
 
 
 ## Citation
