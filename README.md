@@ -7,16 +7,16 @@ We may ask the model to **support** or **oppose** a claim by the desconding orde
 
 ```
 Instruction: Support the following claim in descending order of impact.
-Input: Buying and selling sex should be legal for sex workers and their clients.
-Response: 1. Prohibiting prostitution makes sex workers more vulnerable to violence and abuse.
-2. legalizing prostitution will make it easier to regulate and reduce the harm done to sex workers.
+Input: The impact of AI on the education will be positive.
+Response: 1. AI will be able to help teachers with administrative tasks such as grading papers and keeping track of student progress.
+2. AI can help teachers to keep track of students' progress and to make sure that they have understood the lesson.
+3. AI will be able to help teachers to customize the lesson to their students' needs.
 ```
 
 ```
 Instruction: Oppose the following claim in descending order of impact.
-Input: Buying and selling sex should be legal for sex workers and their clients.
-Response: 1. Sex work is an industry that can be detrimental to society, as it can [undermine the social norms](http://www.apa.org/pi/ses/resources/sex-work.pdf) that hold it together.
-2. Sex work is [degrading] (https://www.psychologytoday.com/blog/in-the-name-love/201106/prostitution-degrading-and-dehumanizing-women) to women and has a [damaging effect] (http://www.apa.org/pi/ses/resources/sex-work.pdf) on society.
+Input: The impact of AI on the education will be positive.
+Response: 1. AI will replace teachers and thus reduce the number of jobs in this sector.
 ```
 
 ## Well-trained Model
