@@ -31,7 +31,7 @@ We collected 1,560 discussion threads before January 2020 of Kialo. Each discuss
 
 <img src="https://github.com/YJiangcm/Debate-alpaca-lora/blob/master/pics/kialo_example.png" width="600" height="300">
 
-We extract each argument with its supported children claims or opposed children claims to form a training example. The children claims are ranked by the descending order of impact. We delete children claims with votes less than 5 or average impact score less than 2. Finally, we obtain 20,998 training data formuated as the following examples:
+We extract each argument with its supported children claims or opposed children claims to form a training example. The children claims are ranked by the descending order of impact. We delete children claims with votes less than 5 or average impact score less than 2. Finally, we obtain 20,998 [training data](https://github.com/YJiangcm/Debate-alpaca-lora/blob/master/kialo_debate.json) formuated as the following examples:
 ```
 {
     "instruction": "Support the following claim in descending order of impact.",
