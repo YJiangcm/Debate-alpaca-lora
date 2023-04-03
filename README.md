@@ -23,8 +23,8 @@ Response: 1. Sex work is an industry that can be detrimental to society, as it c
 
 | Model Name | Hugging Face | Training Data and Setting |
 | --- | --- | :--- |
-| debate-alpaca-lora_7b_001 | [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97-huggingface-yellow)](https://huggingface.co/YuxinJiang) | Trained on 21k kialo data, 3 epoch |
-| debate-alpaca-lora_7b_002 | [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97-huggingface-yellow)](https://huggingface.co/YuxinJiang) | Trained on 52k alpaca data + 21k kialo data, 3 epoch |
+| debate-alpaca-lora_7b_001 | [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97-huggingface-yellow)](https://huggingface.co/YuxinJiang/debate-alpaca-lora_7b_001) | Trained on 21k kialo data, 3 epoch |
+| debate-alpaca-lora_7b_002 | [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97-huggingface-yellow)](https://huggingface.co/YuxinJiang/debate-alpaca-lora_7b_002) | Trained on 52k alpaca data + 21k kialo data, 3 epoch |
 
 ## Data Collection
 We collected 1,560 discussion threads before January 2020 of Kialo. Each discussion forms an argument tree as the following figure shows. Except the thesis, every claim in the argument tree either opposes or supports its parent claim. Moreover, each claim has impact votes assigned by the users of the platform. The impact votes evaluate how impactful a claim is.
