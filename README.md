@@ -3,7 +3,7 @@ An English debate model by instruct-tuning LLaMA on [Kialo](https://www.kialo.co
 
 We may ask the model to **support** or **oppose** a claim by the desconding order of impact.
 
-A quick start: <a href="https://colab.research.google.com/drive/1emuN4LcO4X2-BCoATbhawIZeGBr-d3Y-?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>. Some results are shown below:
+**A quick start for inference**: <a href="https://colab.research.google.com/drive/1emuN4LcO4X2-BCoATbhawIZeGBr-d3Y-?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a> Some results are shown below:
 
 ```
 Instruction: Support the following claim in descending order of impact.
