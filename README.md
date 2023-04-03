@@ -19,12 +19,19 @@ Response: 1. Sex work is an industry that can be detrimental to society, as it c
 2. Sex work is [degrading] (https://www.psychologytoday.com/blog/in-the-name-love/201106/prostitution-degrading-and-dehumanizing-women) to women and has a [damaging effect] (http://www.apa.org/pi/ses/resources/sex-work.pdf) on society.
 ```
 
+## Well-trained Model
+
+| Model Name | Hugging Face | Training Data and Setting |
+| --- | --- | :--- |
+| debate-alpaca-lora_7b_001 | | Trained on 21k kialo data, 3 epoch |
+| debate-alpaca-lora_7b_002 | | Trained on 52k alpaca data + 21k kialo data, 3 epoch |
+
 ## Data Collection
 We collected 1,560 discussion threads before January 2020 of Kialo. Each discussion forms an argument tree as the following figure shows. Except the thesis, every claim in the argument tree either opposes or supports its parent claim. Moreover, each claim has impact votes assigned by the users of the platform. The impact votes evaluate how impactful a claim is.
 
 <img src="https://github.com/YJiangcm/Debate-alpaca-lora/blob/master/pics/kialo_example.png" width="600" height="300">
 
-We extract each argument with its supported children claims or opposed children claims to form a training example. The children claims are ranked by the descending order of impact. We delete children claims whose votes are less than 5 and the average impact score less than 2. Finally, we obtain 20,998 training data formuated as the following examples:
+We extract each argument with its supported children claims or opposed children claims to form a training example. The children claims are ranked by the descending order of impact. We delete children claims whose votes are less than 5 and whose average impact score less than 2. Finally, we obtain 20,998 training data formuated as the following examples:
 ```
 {
     "instruction": "Support the following claim in descending order of impact.",
