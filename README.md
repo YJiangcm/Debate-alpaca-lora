@@ -23,8 +23,8 @@ Response: 1. AI will replace teachers and thus reduce the number of jobs in this
 
 | Model Name | Hugging Face | Training Data and Setting |
 | --- | --- | :--- |
-| [debate-alpaca-lora_7b_001](https://huggingface.co/YuxinJiang/debate-alpaca-lora_7b_001) | [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97-huggingface-yellow)](https://huggingface.co/YuxinJiang/debate-alpaca-lora_7b_001) | Trained on 21k kialo data, 3 epoch |
-| [debate-alpaca-lora_7b_002](https://huggingface.co/YuxinJiang/debate-alpaca-lora_7b_002) | [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97-huggingface-yellow)](https://huggingface.co/YuxinJiang/debate-alpaca-lora_7b_002) | Trained on 52k alpaca data + 21k kialo data, 3 epoch |
+| [debate-alpaca-lora_7b_001](https://huggingface.co/YuxinJiang/debate-alpaca-lora_7b_001) | [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97-huggingface-yellow)](https://huggingface.co/YuxinJiang/debate-alpaca-lora_7b_001) | Trained on 21k kialo data, 10 epoch |
+| [debate-alpaca-lora_7b_002](https://huggingface.co/YuxinJiang/debate-alpaca-lora_7b_002) | [![huggingface](https://img.shields.io/badge/%F0%9F%A4%97-huggingface-yellow)](https://huggingface.co/YuxinJiang/debate-alpaca-lora_7b_002) | Trained on 52k alpaca data + 21k kialo data, 10 epoch |
 
 ## Data Collection
 We collected 1,560 discussion threads before January 2020 of Kialo. Each discussion forms an argument tree as the following figure shows. Except the thesis, every claim in the argument tree either opposes or supports its parent claim. Moreover, each claim has impact votes assigned by the users of the platform. The impact votes evaluate how impactful a claim is.
@@ -51,7 +51,7 @@ We train our model based on [Alpaca LoRA](https://github.com/tloen/alpaca-lora).
 WORLD_SIZE=2 CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --master_port=1234 finetune.py \
     --base_model='decapoda-research/llama-7b-hf' \
     --resume_from_checkpoint 'alpaca-lora-7b' \
-    --num_epochs=3 \
+    --num_epochs=10 \
     --cutoff_len=256 \
     --group_by_length \
     --data_path 'kialo_debate.json' \
