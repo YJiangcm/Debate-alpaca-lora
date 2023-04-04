@@ -46,7 +46,7 @@ We extract each argument with its supported children claims or opposed children 
 ```
 
 ## Training
-We train our model based on [Alpaca LoRA](https://github.com/tloen/alpaca-lora). It costs about 1.5 hours on 2 RTX 3090Ti.
+We train our model based on [Alpaca LoRA](https://github.com/tloen/alpaca-lora). It costs about 5 hours on 2 RTX 3090Ti.
 ```
 WORLD_SIZE=2 CUDA_VISIBLE_DEVICES=0,1 torchrun --nproc_per_node=2 --master_port=1234 finetune.py \
     --base_model='decapoda-research/llama-7b-hf' \
