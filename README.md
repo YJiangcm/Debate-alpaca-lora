@@ -1,4 +1,8 @@
 # Debate-alpaca-lora
+<a href="https://colab.research.google.com/drive/1emuN4LcO4X2-BCoATbhawIZeGBr-d3Y-?usp=sharing" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+[![huggingface](https://img.shields.io/badge/%F0%9F%A4%97-huggingface-yellow)](https://huggingface.co/YuxinJiang/debate-alpaca-lora_7b_001)
+
+
 An English debate model by instruct-tuning LLaMA on [Kialo](https://www.kialo.com/) data. 
 
 We may ask the model to **support** or **oppose** a claim by the desconding order of impact.
